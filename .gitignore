@@ -1,0 +1,14 @@
+.DS_Store
+Archive/
+Debug/
+debug/
+*.ncb
+*.sln
+*.suo
+*.exe
+*.ilk
+*.pdb
+*.vcproj*
+build/
+*.xcodeproj/
+*.1
