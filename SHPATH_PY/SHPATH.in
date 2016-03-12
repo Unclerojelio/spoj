@@ -1,0 +1,172 @@
+2
+4
+gdansk
+2
+2 1
+3 3
+bydgoszcz
+3
+1 1
+3 1
+4 4
+torun
+3
+1 3
+2 1
+4 1
+warszawa
+2
+2 4
+3 1
+2
+gdansk warszawa
+bydgoszcz warszawa
+26
+SanDiego
+3
+2 122
+6 353
+8 724
+LosAngeles
+2
+1 122
+3 858
+Eugene
+3
+2 858
+4 283
+5 872
+Seattle
+3
+3 283
+5 1125
+9 588
+LasVegas
+5
+3 872
+4 1125
+6 294
+7 572
+10 1285
+Phoenix
+3
+1 353
+5 294
+7 418
+Albuquerque
+4
+5 572
+6 418
+8 267
+10 988
+ElPaso
+3
+1 724
+7 267
+12 576
+Helena
+3
+4 588
+10 1078
+14 1446
+Omaha
+5
+5 1285
+7 958
+11 658
+14 471
+15 434
+Dallas
+3
+10 658
+12 195
+16 319
+Austin
+4
+8 576
+11 195
+13 80
+17 514
+SanAntonio
+2
+12 80
+17 545
+Chicago
+3
+9 1446
+10 471
+18 348
+StLouis
+3
+10 434
+16 427
+18 561
+Little Rock
+3
+11 319
+15 347
+17 427
+NewOrleans
+5
+12 514
+13 545
+16 427
+19 530
+25 860
+Cleveland
+4
+14 348
+15 561
+19 522
+20 431
+Nashville
+4
+17 530
+18 522
+23 410
+24 246
+Philadelphia
+2
+18 431
+22 94
+Bangor
+1
+22 443
+NewYork
+3
+21 443
+20 94
+23 624
+Charlotte
+3
+19 410
+22 624
+24 244
+Atlanta
+3
+19 246
+23  244
+25 664
+Miami
+3
+17 860
+24 664
+26 162
+KeyWest
+1
+25 162
+10
+Austin Chicago
+SanDiego Bangor
+Seattle KeyWest
+SanAntonio Seattle
+Eugene Atlanta
+KeyWest Helena
+Dallas Albuquerque
+Phoenix NewYork
+LosAngeles Charlotte
+Atlanta LasVegas
+
+
+
+
