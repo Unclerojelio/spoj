@@ -15,21 +15,21 @@ def prime_sieve(n):
         if primes[x]:
             for i in range(2*primes[x], n+1, primes[x]):
                 primes[i] = 0
-    primes = filter(None, primes)
-    print primes
-    #return filter(None, primes)
-    return primes
+    return filter(None, primes)
     
 
 def ranged_primes(x, y):
     """List primes between x and y."""
     if x == 1: x += 1
     max_prime = int(math.sqrt(y))
-    primes = prime_sieve(max_prime)
-    if x < max_prime:
-        for n in range(len(primes)):
-            print primes[n]
-    return [n for n in range(x, y) if all(n % p for p in primes)]
+    # still don't have a good way to differentiate between just calculating the primes
+    # and segmenting the sieve
+    if y < 317:
+    	primes = prime_sieve(y)
+        return [n for n in range(x, y+1) if n in primes]
+    else:
+    	primes = prime_sieve(max_prime)
+        return [n for n in range(x, y+1) if all(n % p for p in primes)]
 
 def main():
 
