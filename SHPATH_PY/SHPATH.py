@@ -55,3 +55,4 @@ for _ in range(int(num_tests)):
         dist, prev = dijkstra(graph, fromCity)
 
         print(dist[toCity])
+    sys.stdin.readline()
