@@ -58,5 +58,11 @@ for _ in range(int(num_tests)):
         toCity = path[1]
         dist, prev = dijkstra(graph, fromCity)
 
-        print(dist[toCity], prev[toCity])
+        print(dist[toCity], end=" : ")
+        while toCity != fromCity:
+            print(prev[toCity][1], end=" -> ")
+            temp = prev[toCity][1]
+            del prev[toCity]
+            toCity = temp
+        print()
     sys.stdin.readline()
