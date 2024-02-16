@@ -1,27 +1,34 @@
 import sys
 import math
-from queue import PriorityQueue
 
 def edges(graph, u, v):
     neighbors = graph[u]
     return neighbors[v]
 
 def dijkstra(graph, source):
-    q = PriorityQueue()
+    q = []
     dist = {}
+    prev = {}
     dist[source] = 0
-    q.put((0, source))
     for v in graph:
         if v != source:
             dist[v] = math.inf
-    while not q.empty():
-        u = q.get()
+            prev[v] = None
+        q.append((dist[v], v))
+    q.sort()
+    while len(q) != 0:
+        u = q.pop(0)
         for v in graph[u[1]]:
             alt = dist[u[1]] + edges(graph, u[1], v)
             if alt < dist[v]:
                 dist[v] = alt
-                q.put((alt, v))
-    return dist
+                prev[v] = u
+                for i in range(len(q)):
+                    if q[i][1] == v:
+                        q[i] = (alt, q[i][1])
+                        q.sort()
+                        break
+    return dist, prev
 
 num_tests = sys.stdin.readline().strip()
 for _ in range(int(num_tests)):
@@ -49,7 +56,13 @@ for _ in range(int(num_tests)):
         path = path.split()
         fromCity = path[0]
         toCity = path[1]
-        dist = dijkstra(graph, fromCity)
+        dist, prev = dijkstra(graph, fromCity)
 
-        print(dist[toCity])
+        print(dist[toCity], end=" : ")
+        while toCity != fromCity:
+            print(prev[toCity][1], end=" -> ")
+            temp = prev[toCity][1]
+            del prev[toCity]
+            toCity = temp
+        print()
     sys.stdin.readline()
